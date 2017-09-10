@@ -2,6 +2,12 @@ apply plugin: 'java'
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    //retrofit
+    compile "$rootProject.retrofit2"
+    compile "$rootProject.retrofit2_converterGson"
+    compile "$rootProject.retrofit2_adapterRxjava"
+    // Rx
+    compile "$rootProject.rxjava"
 }
 
 sourceCompatibility = "1.7"
