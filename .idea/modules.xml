@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Retrofit-NonRestful.iml" filepath="$PROJECT_DIR$/Retrofit-NonRestful.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Retrofit-NonRESTful.iml" filepath="$PROJECT_DIR$/Retrofit-NonRESTful.iml" />
       <module fileurl="file://$PROJECT_DIR$/adapter-nonrestful/adapter-nonrestful.iml" filepath="$PROJECT_DIR$/adapter-nonrestful/adapter-nonrestful.iml" />
       <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
     </modules>
