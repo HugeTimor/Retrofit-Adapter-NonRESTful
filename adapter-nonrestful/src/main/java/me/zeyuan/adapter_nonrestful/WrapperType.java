@@ -6,11 +6,11 @@ import java.lang.reflect.Type;
 import static com.google.gson.internal.$Gson$Types.typeToString;
 
 
-public class ResponseWrapperType implements ParameterizedType {
+public class WrapperType implements ParameterizedType {
     private Type[] actualTypeArgs;
     private Class wrapper;
 
-    public ResponseWrapperType(Type[] actualTypeArgs, Class wrapper) {
+    public WrapperType(Type[] actualTypeArgs, Class wrapper) {
         this.actualTypeArgs = actualTypeArgs;
         this.wrapper = wrapper;
     }

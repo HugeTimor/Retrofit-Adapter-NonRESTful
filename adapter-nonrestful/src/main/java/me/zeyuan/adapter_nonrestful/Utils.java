@@ -20,6 +20,9 @@ class Utils {
         return false;
     }
 
+    /**
+     * Returns the value of @NonRESTful.
+     */
     static Class getAnnotatedWrapper(Annotation[] annotations) {
         for (Annotation annotation : annotations) {
             if (NonRESTful.class.isInstance(annotation)) {
@@ -29,12 +32,15 @@ class Utils {
         return null;
     }
 
-    static boolean isImplementedInterface(Class clazz, Class reference) {
-        if (!reference.isInterface()) {
+    /**
+     * Returns true if {@code clazz} implemented an the gave interface.
+     */
+    static boolean isImplemented(Class clazz, Class anInterface) {
+        if (!anInterface.isInterface()) {
             throw new IllegalArgumentException("Reference must be a interface");
         }
         for (Class clz : clazz.getInterfaces()) {
-            if (reference.equals(clz)) {
+            if (anInterface.equals(clz)) {
                 return true;
             }
         }
@@ -46,7 +52,7 @@ class Utils {
             @Override
             public Type[] getActualTypeArguments() {
                 Type[] args = ((ParameterizedType) (type)).getActualTypeArguments();
-                ResponseWrapperType baseType = new ResponseWrapperType(args, wrapper);
+                WrapperType baseType = new WrapperType(args, wrapper);
                 return new Type[]{baseType};
             }
 

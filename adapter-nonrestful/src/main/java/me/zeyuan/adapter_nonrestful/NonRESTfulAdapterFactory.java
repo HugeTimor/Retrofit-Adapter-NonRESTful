@@ -23,7 +23,7 @@ public class NonRESTfulAdapterFactory extends CallAdapter.Factory {
     }
 
     public NonRESTfulAdapterFactory(Class wrapper) {
-        if (!Utils.isImplementedInterface(wrapper, ResponseWrapper.class)) {
+        if (!Utils.isImplemented(wrapper, ResponseWrapper.class)) {
             throw new IllegalArgumentException("wrapper should implemented ResponseWrapper.class");
         }
         this.wrapper = wrapper;
@@ -38,7 +38,7 @@ public class NonRESTfulAdapterFactory extends CallAdapter.Factory {
         if (annotatedWrapper == null) {
             return null; // Ignore no non-RESTful method.
         }
-        if (!Utils.isImplementedInterface(annotatedWrapper, ResponseWrapper.class)) {
+        if (!Utils.isImplemented(annotatedWrapper, ResponseWrapper.class)) {
             throw new IllegalArgumentException("@NonRESTful markup class should implemented ResponseWrapper.class");
         }
         if (!DefaultResponseWrapper.class.equals(annotatedWrapper)) {
