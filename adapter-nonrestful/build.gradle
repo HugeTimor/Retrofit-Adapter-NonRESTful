@@ -1,4 +1,5 @@
 apply plugin: 'java'
+apply plugin: 'com.novoda.bintray-release'
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -8,6 +9,17 @@ dependencies {
     compile "$rootProject.retrofit2_adapterRxjava"
     // Rx
     compile "$rootProject.rxjava"
+}
+
+publish {
+    groupId = 'me.zeyuan.retrofit'
+    artifactId = 'adapter-nonrestful'
+    publishVersion = '0.1.0'
+    desc = 'An retrofit adapter that adapt non-RESTful response as RESTful response with RxJava.'
+    website = 'https://github.com/HugeTimor/Retrofit-Adapter-NonRESTful'
+    bintrayUser = bintrayUser
+    bintrayKey = bintrayKey
+    dryRun = false
 }
 
 sourceCompatibility = "1.7"
